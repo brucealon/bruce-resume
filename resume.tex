@@ -1,0 +1,256 @@
+
+% definitions and configuration
+
+\font\fnname=cmbx10 at 17pt
+\font\fnsection=cmbx10 at 14pt
+\font\fnsmall=cmr9
+\font\fnlabel=cmbx10
+
+\def\tinyskip{\vskip 0.2in}
+\def\miniskip{\vskip 0.1in}
+\def\microskip{\vskip 0.05in}
+
+\def\sectionhead#1{\tinyskip\noindent{\fnsection #1}\miniskip}
+
+\def\accomplish#1{\parindent=5pt$\bullet$ \hbox{\hsize=35pc \vtop{\noindent #1}} \microskip}
+%\def\accomplish#1{\leftskip=10pt\parindent=-10pt$\bullet$ #1 \microskip\leftskip=0pt}
+%\def\accomplish#1{\parindent=10pt\item{$\bullet$}#1 \microskip}
+
+\def\skill#1#2{\noindent{\fnlabel #1} #2\microskip}
+
+\def\employer#1#2{\noindent{\fnlabel#1}\hfil\break#2\microskip}
+
+\headline={
+  \ifnum\pageno=1
+    \hfill
+  \else
+    Bruce A King\hfill\folio
+  \fi}
+\nopagenumbers
+
+% Let it begin
+
+\centerline{\fnname Bruce A King}
+\centerline{\fnsmall Eugene Oregon}
+\centerline{\fnsmall (541) 513 -- 6698}
+\centerline{\fnsmall bruce@minuteproductions.com}
+\centerline{\fnsmall https://github.com/brucealon/}
+
+\sectionhead{Professional Summary}
+
+\noindent
+Senior Software Engineer with over 20 years of professional experience
+developing reliable, useful applications and helping customers and
+coworkers to meet their needs. I am an avid autodidact with a wide
+range of interests.
+
+\sectionhead{Skills}
+
+\skill
+  {Containers} {Experienced deploying applications with Docker and
+  Kubernetes.}
+
+\skill
+  {Databases} {Strong SQL skills. Familiar with NoSQL. Experienced
+  with data transfer formats like JSON, XML, and YAML as well as
+  simpler comma- and tab-delimited files.}
+
+\skill
+  {Networks} {Experienced in TCP/IP networking concepts and
+  applications.}
+
+\skill
+  {Operating Systems} {Administering and troubleshooting Linux (rpm,
+  dnf, yum, apt-get, apk), OS X, and Microsoft Windows.}
+
+\skill
+  {Programming Languages} {Experienced with BASH, C/C++, Emacs Lisp,
+  Groovy, Java, JavaScript, Perl, PHP, PL/SQL, Python, Ruby, and
+  Windows PowerShell. Some familiarity with Clojure, Elixir, Erlang,
+  Haskell, and PostScript. Experienced with imperative and
+  Object-Oriented programming. Familiar with functional programming.}
+
+\skill
+  {Systems Administration} {Extensive experience using and
+  administering Linux, Unix, and Windows systems, including a variety
+  of services (daemons).}
+
+\skill
+  {Tools} {Experienced with a variety of command-line tools for
+  version control (git, subversion, cvs), virtualization (vagrant,
+  docker, kubectl), content examination and exploration (grep, awk,
+  sed, xmlstarlet, jq), and many other tasks. Experienced with a
+  number of graphical tools such as SoapUI and Postman; SQL Server
+  Integration Services to link data from SQL Server to external
+  third-party systems; and SQL Server Reporting Services.}
+
+\skill
+  {Virtualization} {Familiar with using VMware, VirtualBox, Vagrant
+  and other virtualization technologies for testing and
+  troubleshooting and for standardized development environments.}
+
+\skill
+  {Web Development} {Fluent in developing Internet and intranet
+  scripts and applications in C, Perl, Java, HTML, CSS, and
+  JavaScript.}
+
+\sectionhead{Employment}
+
+\employer
+  {Symantec --- Springfield, OR}
+  {Principle Software Engineer, 2016--Present}
+
+\accomplish {Contributed features and bug fixes to the consumer support web site, built in Java/Spring,
+supporting an average of 200,000 daily users worldwide with over two
+dozen country/language localizations, coordinating many phone and chat
+support partners and vendors, and available in multiple layouts
+including responsive/mobile and right-to-left languages.}
+
+\accomplish{Led the migration of the consumer support web site and other
+applications from IT-managed on premises infrastructure to team managed
+Kubernetes clusters in Microsoft Azure.}
+
+\accomplish{Trained other members of my team in the use and management of
+Docker and Kubernetes via YAML configuration files and command
+line tools.}
+
+\accomplish{Supported and extended multiple REST APIs running on
+Ruby/Sinatra.}
+
+\accomplish{Supported an internal Jenkins CI/CD application relied on by
+several teams. This is running in a Docker container in
+Kubernetes, which provided some interesting challenges and is not,
+perhaps, the recommended configuration for Jenkins, but
+maintaining it was essential to migrating to Kubernetes in a
+reasonable timeframe with minimal disruption, a goal we achieved.}
+
+\miniskip
+\employer
+  {Eugene School District 4J --- Eugene, OR}
+  {Senior Application Developer, 2011--2016}
+
+\accomplish{Converted student-oriented data for a roughly 16,000 student
+school district from the discontinued AAL product eSIS, running on
+Linux and Oracle, to Edupoint's Synergy running on Microsoft
+Windows Server 2008 and Microsoft SQL Server 2008 R2.}
+
+\accomplish{Collaborated with school administrators to develop the Early
+Warning System report, a tool to identify, based on attendance and
+failing grades, High School students who need additional help.}
+
+\accomplish{Collaborated with school administrators and student counselors
+to develop the Graduation Requirements Report, used both to
+determine what each student still needs to accomplish in order to
+graduate and, longitudinally, to track performance from school to
+school and across the district. The graduation requirements
+information had been available only for individual students and
+could take up to 30 seconds per student to load. The Graduation
+Requirements Report combined that data with additional
+demographics and exported all students for a school or even the
+entire district to Excel for later sorting and other
+manipulations.}
+
+\accomplish{Built and/or maintained a number of processes to extract data
+from the Student Information System for import into third-party
+systems such as Naviance, a college and career readiness platform,
+and Follett Destiny, a Library Management System, as well as
+several others. The extracts were developed in BASH, Perl,
+PowerShell, SQL Server Integration Services, and other languages
+and tools, and spread across a number of Linux and Windows
+systems, executing from within Oracle or SQL Server or from cron
+jobs and other configurations.}
+
+\accomplish{For the new Student Information System I worked to standardize
+all third-party integrations into SSIS packages and PowerShell
+scripts, with a small number of Perl scripts, all running on one
+system managed through SQL Server Management Studio to reduce the
+confusion and documentation involved in routine modifications and
+in troubleshooting problems.}
+
+\accomplish{Wrote processes to import student assessments into
+Synergy. The handled assessments include ACT, AP, easyCBM,
+EXPLORE, OAKS, PLAN, PSAT, SAT, SBAC, and Work Keys with a system
+that is simple to modify so that as new assessments are
+implemented in the district they can easily be imported into the
+Student Information System.}
+
+\accomplish{Wrote often complicated SQL on a daily basis to investigate
+questions and troubleshoot problems, at all times striving to
+improve both accuracy and efficiency.}
+
+\miniskip
+\employer
+  {Symantec --- Springfield, OR}
+  {Software Engineer, 2005--2011}
+
+\accomplish{Served as the primary contact for all UNIX server issues and
+helped IT troubleshoot and solve various problems involving httpd
+servers and application containers as well as network connectivity
+problems, permissions issues, symbolic links, etc.}
+
+\accomplish{Architecture lead responsible for investigating, implementing,
+and teaching new methods and frameworks, such as unit testing and
+test driven development.}
+
+\accomplish{Took over the lead maintainer role for Monarch, a Flex MVC
+framework derived from Cairngorm, used in our award winning
+One-Click Support project for the Norton line of consumer
+products.}
+
+\accomplish{Learned Ruby and took over maintenance of a Ruby project that
+consolidated XML data files into a compressed Action Message
+Format (AMF) file that reduced load times for a Flex consumer
+support application.}
+
+\accomplish{Primary server administrator for our internal system,
+installing, configuring, and maintaining PostgreSQL and MySQL
+RDBMSs, Apache httpd, BEA Weblogic and Apache Tomcat application
+servers, user accounts, and various individual needs.}
+
+\accomplish{Lead developer for Common Error Dialog, an error to solution
+linking system, written in Java, that, by connecting consumer
+product customers to step-by-step instructions, helped them solve
+their problems without having to contact our support departments,
+thereby substantially reducing Symantec's support costs.}
+
+\miniskip
+\employer
+  {ViewTouch --- Eugene, OR}
+  {Developer, 2002--2005}
+
+\accomplish{Developed Point-of-Sales software for the X Windows platform
+on FreeBSD and Linux, written in C/C++.}
+
+\accomplish{Designed and developed supporting utilities for installation,
+data backup and recovery, background report generation, and other
+tasks.}
+
+\accomplish{Interfaced with other companies to implement credit card
+features using multiple APIs and processors.}
+
+\miniskip
+\employer
+  {Symantec --- Eugene, OR}
+  {Web Developer, 1998--2001}
+
+\accomplish{Designed and developed message routing system that
+significantly and measurably improved technician efficiency in
+handling customer problems.}
+
+\accomplish{Developed a scriptable system (direct.cgi) that allowed the
+overseas teams to more quickly generate pages for new products and
+versions.}
+
+\accomplish{As part of larger team, designed and developed award-winning
+interactive Web pages and scripts to facilitate technical and
+customer support operations.}
+
+\sectionhead{Education}
+
+\employer
+  {Lane Community College}
+  {Eugene, OR}
+
+\accomplish{Focused on networking and programming.}
+
+\bye
